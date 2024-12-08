@@ -20,14 +20,14 @@ const Pricing = () => {
             <div className="p-10 border text-center border-neutral-700 rounded-xl">
               TOTAL SUPPLY:
               <br/>
-              750,000,000
+              300,000,000
             </div>
           </div>
           <div className="w-full sm:w-1/2 lg:w-1/4 p-2">
             <div className="p-10 border text-center border-neutral-700 rounded-xl">
               TOKEN PER MINT:
               <br/>
-              25,000
+              10,000
             </div>
           </div>
           <div className="w-full sm:w-1/2 lg:w-1/4 p-2">
