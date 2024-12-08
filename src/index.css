@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Cyberpunk color palette */
+  --cyberpunk-pink: #ff007f; /* Neon pink */
+  --cyberpunk-violet: #8a2be2; /* Neon violet */
+  --cyberpunk-blue: #00f5ff; /* Neon blue */
+  --cyberpunk-green: #00ff00; /* Neon green */
+  --cyberpunk-highlight: #00ffcc;
+  
+  /* Background gradient */
+  --cyberpunk-gradient: linear-gradient(45deg, var(--cyberpunk-pink), var(--cyberpunk-violet), var(--cyberpunk-blue));
+
+  font-family: "Poppins", sans-serif;
+  color-scheme: dark light;
+  background: var(--cyberpunk-gradient);
+  color: white; /* Set default text color to white */
+}
+
+/* Apply custom styles to body */
+body {
+  background: var(--cyberpunk-gradient);
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s ease infinite;
+}
+
+/* Animation for gradient shift */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Text styles */
+h1, h3, h4 {
+  color: var(--cyberpunk-pink);
+}
+ h2{
+  color: var(--cyberpunk-highlight);
+  border: 1px solid black;
+ }
+
+p, span, a {
+  border: 1px solid black;
+  padding: 4px;
+  color: var(--cyberpunk-highlight);
+}
+
+h6{
+  color: var(--cyberpunk-highlight);
+  border: 1px solid black;
+}
+h5{
+  color: var(--cyberpunk-highlight);
+  border: 1px solid black;
+}

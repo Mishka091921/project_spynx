@@ -1,0 +1,115 @@
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/fonts/orbitron.woff2') format('woff2'),
+       url('/fonts/orbitron.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;  /* Enable horizontal scrolling */
+}
+
+body {
+  display: flex;
+  flex-direction: row; /* Make content horizontally laid out */
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Distorted Text Shadow Effect */
+@keyframes distortion {
+  0%, 100% {
+    text-shadow: 
+      2px 2px 4px rgba(255, 0, 0, 0.7),
+      -2px -2px 5px rgba(0, 255, 0, 0.7),
+      3px 3px 6px rgba(0, 0, 255, 0.5);
+  }
+  10% {
+    text-shadow: 
+      4px 4px 6px rgba(255, 0, 0, 0.7),
+      -4px -4px 7px rgba(0, 255, 0, 0.7),
+      5px 5px 8px rgba(0, 0, 255, 0.5);
+  }
+  20% {
+    text-shadow: 
+      6px 6px 8px rgba(255, 0, 0, 0.7),
+      -6px -6px 10px rgba(0, 255, 0, 0.7),
+      7px 7px 10px rgba(0, 0, 255, 0.5);
+  }
+  30% {
+    text-shadow: 
+      8px 8px 10px rgba(255, 0, 0, 0.7),
+      -8px -8px 12px rgba(0, 255, 0, 0.7),
+      9px 9px 12px rgba(0, 0, 255, 0.5);
+  }
+  40% {
+    text-shadow: 
+      10px 10px 12px rgba(255, 0, 0, 0.7),
+      -10px -10px 14px rgba(0, 255, 0, 0.7),
+      12px 12px 14px rgba(0, 0, 255, 0.5);
+  }
+  50% {
+    text-shadow: 
+      12px 12px 14px rgba(255, 0, 0, 0.7),
+      -12px -12px 16px rgba(0, 255, 0, 0.7),
+      14px 14px 16px rgba(0, 0, 255, 0.5);
+  }
+  60% {
+    text-shadow: 
+      14px 14px 16px rgba(255, 0, 0, 0.7),
+      -14px -14px 18px rgba(0, 255, 0, 0.7),
+      16px 16px 18px rgba(0, 0, 255, 0.5);
+  }
+  70% {
+    text-shadow: 
+      16px 16px 18px rgba(255, 0, 0, 0.7),
+      -16px -16px 20px rgba(0, 255, 0, 0.7),
+      18px 18px 20px rgba(0, 0, 255, 0.5);
+  }
+  80% {
+    text-shadow: 
+      18px 18px 20px rgba(255, 0, 0, 0.7),
+      -18px -18px 22px rgba(0, 255, 0, 0.7),
+      20px 20px 22px rgba(0, 0, 255, 0.5);
+  }
+  90% {
+    text-shadow: 
+      20px 20px 22px rgba(255, 0, 0, 0.7),
+      -20px -20px 24px rgba(0, 255, 0, 0.7),
+      22px 22px 24px rgba(0, 0, 255, 0.5);
+  }
+}
+
+.glitch {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  color: #00ffcc; /* Neon color */
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  animation: distortion 4s infinite linear; /* Distortion animation for shadows */
+  background-color: black;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  color: red; /* Shadow color */
+  animation: distortion 4s infinite linear; /* Distortion effect for shadows */
+}
+
+.glitch::after {
+  left: 3px;
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.7), 0 0 10px rgba(255, 0, 0, 0.5);
+}
